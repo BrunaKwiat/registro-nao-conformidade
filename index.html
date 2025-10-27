@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Relatório de Inspeção</title>
+  <title>RQ-103-01 REGISTRO DE PRODUTO E SERVIÇO NÃO CONFORME</title>
 
   <!-- Estes metas são atualizados pelo JS (applyTheme) -->
   <meta name="color-scheme" content="light" />
@@ -63,8 +63,7 @@
       <div class="brand" aria-label="Shiva Conexões">
         <img src="shiva.png" alt="Shiva Conexões" />
         <div class="brand-text">
-          <span class="brand-title">Relatório de Inspeção</span>
-          <span class="brand-sub">Laudo Interno</span>
+          <span class="brand-title">>RQ-103-01 REGISTRO DE PRODUTO E SERVIÇO NÃO CONFORME</span>
         </div>
       </div>
 
@@ -120,88 +119,25 @@
 
       <section class="conteudo" id="conteudo" tabindex="-1">
         <form id="formRelatorio" novalidate>
-          <!-- Identificação do Relatório -->
+          <!-- Identificação da Não Conformidade-->
           <fieldset>
-            <legend>Identificação do Relatório</legend>
+            <legend>Identificação da Não Conformidade</legend>
             <div class="grid">
-              <label for="numeroRelatorio">Nº do Relatório</label>
+              <label for="numeroRelatorio">Quantidade</label>
               <input required id="numeroRelatorio" name="numeroRelatorio" autocomplete="off" inputmode="numeric" />
 
-              <label for="fornecedorFabricante">Fornecedor/Fabricante</label>
-              <input id="fornecedorFabricante" name="fornecedorFabricante" autocomplete="organization" />
+              <label for="Produtoservico">Produto/Serviço</label>
+              <input id="Produtoservico" name="Produtoservico" autocomplete="organization" />
 
-              <label for="interessado">Interessado</label>
+              <label for="interessado">Descrição de não Conformidade</label>
               <input id="interessado" name="interessado" autocomplete="name" />
 
-              <label for="ordemProducao">Empenho</label>
-              <input id="ordemProducao" name="ordemProducao" autocomplete="off" inputmode="numeric" />
+              
 
-              <label for="quantidade">Quantidade</label>
-              <input id="quantidade" name="quantidade" type="number" min="1" value="1" />
-
-              <div class="periodo-field">
-                <div class="p-left">
-                  <label for="dataInicio">Período de Inspeção</label>
-                </div>
-                <div class="p-right">
-                  <div class="periodo-inspecao">
-                    <input required id="dataInicio" name="dataInicio" type="datetime-local" />
-                    <span class="ate">até</span>
-                    <input required id="dataFim" name="dataFim" type="datetime-local"  />
-                  </div>
-                </div>
-
-                <div class="p-left">
-                  <label for="totalHoras">Total de Horas</label>
-                </div>
-                <div class="p-right">
-                  <input id="totalHoras" name="totalHoras" type="text" placeholder="00:00" />
-                </div>
-
-                <div class="p-left">
-                  <label for="laboratorio">Laboratório</label>
-                </div>
-                <div class="p-right">
-                  <input required id="laboratorio" name="laboratorio" autocomplete="organization" />
-                </div>
-              </div>
-
-              <label for="normasReferencia" class="full">Norma Técnica</label>
-              <select id="normasReferencia" name="normasReferencia">
-                <option value="">Selecione...</option>
-                <option value="ABNT NBR 5648:2018">ABNT NBR 5648:2018</option>
-                <option value="ABNT NBR 8219">ABNT NBR 8219</option>
-                <option value="ABNT NBR NM 82">ABNT NBR NM 82</option>
-                <option value="EN 62321-3-1:2014">EN 62321-3-1:2014</option>
-                <option value="ABNT NBR NM 84">ABNT NBR NM 84</option>
-                <option value="ABNT NBR 8218">ABNT NBR 8218</option>
-                <option value="ABNT NBR 14264">ABNT NBR 14264</option>
-                <option value="ABNT NBR 7371">ABNT NBR 7371</option>
-                <option value="ISO 13259:2020 Condição B">ISO 13259:2020 — Condição B: com deflexão diametral</option>
-                <option value="ISO 13259:2020 Condição C">ISO 13259:2020 — Condição C: com deflexão angular</option>
-                <option value="ISO 3260:2010 Metodo A">ISO 3260:2010 — Método A: água quente e fria</option>
-                <option value="ISO 3260:2010 Metodo B">ISO 3260:2010 — Método B: água quente e fria</option>
-                <option value="NBR 9822">NBR 9822</option>
-                <option value="NBR 7231">NBR 7231</option>
-                <option value="NBR 6483">NBR 6483</option>
-                <option value="NBR 21138">NBR 21138</option>
-                <option value="5647">5647</option>
-                <option value="5648">5648</option>
-                <option value="5688">5688</option>
-                <option value="7362">7362</option>
-                <option value="7665">7665</option>
-              </select>
-            </div>
-          </fieldset>
-
-          <!-- Identificação das Amostras -->
+          <!-- Responsavel pela emissao -->
           <fieldset>
-            <legend>Identificação da(s) Amostra(s)</legend>
-            <div id="amostras"></div>
-            <button type="button" class="btn btn--secondary" id="btnAddAmostra">
-              <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg>
-              Adicionar amostra
-            </button>
+            <legend>RESPONSÁVEL PELA EMISSÃO</legend>
+            
           </fieldset>
 
           <!-- Métodos e Materiais -->
