@@ -78,19 +78,21 @@
         <form id="formRelatorio" novalidate>
           <!-- Identificação -->
           <fieldset>
-            <legend>Identificação da Não Confirmidade </legend>
-            <div class="grid-identificacao">
-              <div class="field short">
-                <label for="ProdutoServico">Produto/Serviço:</label>
-                <input type="text" id="ProdutoServico" name="ProdutoServico" required inputmode="numeric"
-                  pattern="^[0-9]{1,}$" autocomplete="off" placeholder="Ex.: 000123" />
-              </div>
-              <div class="field">
+            <legend>Identificação da Não Confirmidade</legend>
+                <div class="field">
                 <label for="quantidadeaverificar">Quantidade a verificar</label>
                 <input type="text" id="quantidadeaverificar" name="quantidadeaverificar"
                   value="Acima de 500 peças verificar o plano de amostragem." readonly aria-readonly="true"
                   inputmode="none" />
               </div>
+
+            <div class="grid-identificacao">
+              <div class="field short">
+                <label for="quantidade">Quantidade</label>
+                <input type="text" id="ordemProducao" name="quantidade" required inputmode="numeric"
+                  pattern="^[0-9]{1,}$" autocomplete="off" placeholder="Ex.: 000123" />
+              </div>
+              
               <div class="field">
                 <label for="quandoexecutarinspecao">Quando executar a inspeção</label>
                 <input type="text" id="quandoexecutarinspecao" name="quandoexecutarinspecao" value="Peças acabadas"
